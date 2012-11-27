@@ -1,0 +1,49 @@
+<framework name="swiz">
+	<library>
+		<group name="LibraryName">
+			<match type="filename">
+					<![CDATA[\bswiz-framework-v(\d.*)]]>
+			</match>
+			<match type="package">
+					<![CDATA[org.swizframework]]>
+			</match>
+			<match type="version">
+					<![CDATA[(\d*)\.(\d*)\.(\d*)]]>
+			</match>
+		</group>
+	</library>
+	<classes>
+		<group name="Model">
+			<match type="filename">
+					<![CDATA[(\bModel([A-Z]\w*)|(\w*)Model\b)(.as|.mxml)]]>
+			</match>
+			<match type="content">
+				
+			</match>
+		</group>
+		<group name="View">
+			<match type="filename">
+					<![CDATA[(\bMediator([A-Z]\w*)|(\w*)Mediator\b)(.as|.mxml)]]>
+			</match>
+			<match type="content">
+				
+			</match>
+		</group>
+		<group name="Controller">
+			<match type="filename">
+					<![CDATA[(\bCommand([A-Z]\w*)|(\w*)Command\b)(.as)]]>
+			</match>
+			<match type="content">
+				<![CDATA[import(\s*)org.swizframework.utils.commands.ICommand(.*)implements([\s]*)ICommand]]>
+			</match>
+		</group>
+		<group name="Swiz Events">
+			<match type="filename">
+					<![CDATA[(\bEvent([A-Z]\w*)|(\w*)Event\b).as]]>
+			</match>
+			<match type="content">
+				
+			</match>
+		</group>
+	</classes>
+</framework>
